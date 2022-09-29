@@ -31,5 +31,5 @@ def process_packet(packet):
 
 if __name__ == '__main__':
     global http_data
-    http_data = {'SourceIP': '','SourcePort': '', 'Method': '', 'Path': '', 'Http_Version': '' ,'Accept': '', 'Accept_Encoding': '', 'Accept_Language': '', 'Cache_Control': '',  'Connection':'', 'Content_Length': '','Content_Type': '', 'Cookie': '','Host':'', 'Origin': '', 'Referer': '', 'Upgrade_Insecure_Requests': '','User_Agent':'', 'UtcTime':'', 'Payload':''}
+    http_data = {'SourceIP': '','SourcePort': '', 'Method': '', 'Path': '', 'Http_Version': '' ,'Accept': '', 'Accept_Encoding': '', 'Accept_Language': '', 'Cache_Control': '',  'Connection':'', 'Content_Length': '','Content_Type': '', 'Cookie': '','Host':'', 'Origin': '', 'Referer': '', 'Upgrade_Insecure_Requests': '','User_Agent':'', 'UtcTime':''}
     sniff(iface='Wi-Fi',prn=process_packet)
