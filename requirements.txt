@@ -3,3 +3,4 @@ python-evtx
 xmltodict
 requests
 scapy[basic]
+beautifulsoup4
