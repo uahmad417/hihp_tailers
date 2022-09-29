@@ -10,7 +10,7 @@ def readconfig():
 
 def evtx_to_json():
     with evtx.Evtx(config['sysmon']['path']) as open_logs:
-        events = list(open_logs.records)
+        events = list(open_logs.records())
         count = len(events)
         for record in events:
             json_log = json.loads(json.dumps(xmltodict.parse(record.xml())))
