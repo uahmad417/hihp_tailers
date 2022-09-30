@@ -4,3 +4,4 @@ xmltodict
 requests
 scapy[basic]
 beautifulsoup4
+python-dateutil
