@@ -12,7 +12,7 @@ def connect_elastic():
     es = Elasticsearch(config['elastic']['host'])
 
 def upload_scapy():
-    with open('scapy_logs.json','r') as logs:
+    with open('../scapy_logs.json','r') as logs:
         scapy_logs = logs.readlines()
     for record in scapy_logs:
         es.index(index = config['elastic']['scapy_index'], body = record)
