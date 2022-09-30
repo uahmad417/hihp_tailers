@@ -45,12 +45,11 @@ def get_creds(W1,W2):
     return users,passw
 
 if __name__=='__main__':
+    readConfig()
     logging.basicConfig(
         format='%(asctime)s -- %(levelname)s -- %(message)s',
-        level = logging.INFO,
+        level = int(config['fuzzer']['logging_level']),
         datefmt='%H:%M:%S')
-    logging.debug('Initializing Module')
-    logging.debug('Reading Config')
-    readConfig()
+    logging.debug('Initializing Module')    
     logging.debug('Config Read')
     get_token()
