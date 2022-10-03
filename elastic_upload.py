@@ -12,13 +12,13 @@ def connect_elastic():
     es = Elasticsearch(config['elastic']['host'])
 
 def upload_scapy():
-    with open('../scapy_logs.json','r') as logs:
+    with open(config['elastic']['scapy_json_logs_path'],'r') as logs:
         scapy_logs = logs.readlines()
     for record in scapy_logs:
         es.index(index = config['elastic']['scapy_index'], body = record)
 
 def upload_sysmon():
-    with open('sysmon_logs.json','r') as logs:
+    with open(config['elastic']['sysmon_json_logs_path'],'r') as logs:
         sysmon_logs = logs.readlines()
     for record in sysmon_logs:
         es.index(index = config['elastic']['sysmon_index'], body = record)
